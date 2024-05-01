@@ -1,5 +1,5 @@
 pipeline {
-     environment {
+    environment {
         PATH = "/mnt/c/Software/apache-maven-3.6.3/bin:${env.PATH}"
     }
     agent any
@@ -10,6 +10,7 @@ pipeline {
                 sh 'java -version'
             }
         }
+    }
     post {
         success {
             echo "job is done"
